@@ -1,0 +1,252 @@
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/estilo.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="favicon.ico" />
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    var pull = $('#pull');
+    menu = $('nav ul');
+    menuHeight  = menu.height();
+
+    pull.hide();
+    var w = $(menu).width();
+    if(w > 800) {
+    	pull.hide();
+        menu.removeAttr('style');
+        console.log('not 	responsive mode'+ w);
+    }else{
+    	pull.show();
+        $('nav ul li').css('border-bottom', 'solid 2px #333');
+    	console.log('responsive mode' + w);
+    	menu.slideToggle();
+    }
+
+    $(pull).on('click', function(event) {
+        event.preventDefault();
+        menu.slideToggle();
+    });
+    
+});
+</script>
+
+<title>bootNews (Estrutura básica de uma página com HTML 5)</title>
+</head>
+<body>
+<div class="container bg-branco">
+	<header>
+		<div class="row">
+		    <nav class=" bg-light navbar navbar-expand-lg top-nav">
+		        <ul class="list-unstyled navbar-nav top-nav">
+		        	<li class="p-2 nav-item">
+                        <a href="index.html" class="navbar-brand"><img src="images/logomarca.png" alt="Bootnews" /></a>
+                    </li>
+		            <li class="p-2 nav-item btn-xs">
+		    			<a href="mundo.html">Mundo</a>
+		            </li>
+		            <li class="p-2 nav-item">
+		            	<a href="mundo.html">
+		            	Esportes
+		            	</a>
+		            </li>
+		            <li class="p-2 nav-item">
+		            	<a href="mundo.html">
+		            	Saúde
+		            	</a>
+		            </li>
+		            <li class="p-2 nav-item nav-item">
+		            	<a href="mundo.html">
+		            	Música
+		            	</a>
+		            </li>
+		            <li class="p-2 nav-item">
+		            	<a href="mundo.html">
+		            	Televisão
+		            	</a>
+		        	</li>
+		            <li class="p-2 nav-item">
+		            	<a href="mundo.html">
+		            	Tecnologia
+		            	</a>
+		            </li>
+		        </ul>
+		        <a href="/" id="pull" class="p-2"><img src="images/nav-icon.png" title="menu"></a>
+		    </nav>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 text-center p-3">
+				<a href="" target="_blank">
+					<img src="images/banner728x90.png" class="img-responsive">
+				</a>
+			</div>
+		</div>
+		
+	</header>
+ 	
+	<section>
+		<div class="row">
+			<div class="col-sm-12 col-md-8 col-lg-8">
+			    <ul class="list-unstyled ul_news">
+		            <li class="li_news m-3">
+		                <a class="foto_news" href="noticia.html">
+		                   <img src="thumb/300x160/may-e-trump-nao-foram-convidados-para-o-casamento-de-harry-e-meghan.jpg" alt="May e Trump não foram convidados para o casamento de Harry e Meghan" class="img-thumbnail img-responsive">
+		                </a>
+		                <h6>
+		                    <a href="noticia.html" class="title_li_news">May e Trump não foram convidados para o casamento de Harry e Meghan</a>
+		                </h6>
+		                <p class="text-justify">
+		                	Democratas ganharam maioria na Câmara dos Representantes nas eleições desta terça. Donald Trump faz coletiva de imprensa na Casa Branca nesta quarta-feira (7), após as eleições de meio de mandato...
+		                </p>
+		            </li>
+
+		            <li class="li_news m-3">
+		                <a class="foto_news" href="noticia.html">
+		                   <img src="thumb/300x160/tubarao-persegue-barco-da-policia-australiana-veja-video.jpg" alt="May e Trump não foram convidados para o casamento de Harry e Meghan" class="img-thumbnail img-responsive">
+		                </a>
+		                <h6>
+		                    <a href="noticia.html" class="title_li_news">Tubarão persegue barco da polícia australiana veja vídeo</a>
+		                </h6>
+		                <p class="text-justify">
+		                	Democratas ganharam maioria na Câmara dos Representantes nas eleições desta terça. Donald Trump faz coletiva de imprensa na Casa Branca nesta quarta-feira (7), após as eleições de meio de mandato...
+		                </p>
+		            </li>
+
+		            <li class="li_news m-3">
+		                <a class="foto_news" href="noticia.html">
+		                   <img src="thumb/300x160/motociclista-famosa-no-instagram-morre-em-acidente-de-transito-na-california.png" alt="May e Trump não foram convidados para o casamento de Harry e Meghan" class="img-thumbnail img-responsive">
+		                </a>
+		                <h6>
+		                    <a href="noticia.html" class="title_li_news">Motociclista famosa no instagram morre em acidente de trânsito na california</a>
+		                </h6>
+		                <p class="text-justify">
+		                	Democratas ganharam maioria na Câmara dos Representantes nas eleições desta terça. Donald Trump faz coletiva de imprensa na Casa Branca nesta quarta-feira (7), após as eleições de meio de mandato...
+		                </p>
+		            </li>
+
+
+		            <li class="li_news m-3">
+		                <a class="foto_news" href="noticia.html">
+		                   <img src="thumb/300x160/tributo-de-conka-a-sabotage-em-cabeca-de-nego-lembra-que-rap-e-compromisso-.jpg" alt="May e Trump não foram convidados para o casamento de Harry e Meghan" class="img-thumbnail img-responsive">
+		                </a>
+		                <h6>
+		                    <a href="noticia.html" class="title_li_news">Tributo de Conka a Sabotage em cabeça de nego lembra que rap  é compromisso</a>
+		                </h6>
+		                <p class="text-justify">
+		                	Democratas ganharam maioria na Câmara dos Representantes nas eleições desta terça. Donald Trump faz coletiva de imprensa na Casa Branca nesta quarta-feira (7), após as eleições de meio de mandato...
+		                </p>
+		            </li>
+
+		            
+		            <li class="li_news m-3">
+		                <a class="foto_news" href="noticia.html">
+		                   <img src="thumb/300x160/barroso-concede-perdao-da-pena-de-jose-dirceu-no-mensalao-do-pt.jpg" alt="Entenda a ‘guerra comercial’ entre EUA e China e como ela pode afetar a economia mundial" class="img-thumbnail img-responsive">
+		                </a>
+		                <h6>
+		                    <a href="noticia.html" class="title_li_news">Barroso concede perdão da pena de José Dirceu no mensalão do PT</a>
+		                </h6>
+		                <p class="text-justify">
+		                	Democratas ganharam maioria na Câmara dos Representantes nas eleições desta terça. Donald Trump faz coletiva de imprensa na Casa Branca nesta quarta-feira (7), após as eleições de meio de mandato...
+		                </p>
+		            </li>
+
+		            
+		            <li class="li_news m-3">
+		                <a class="foto_news" href="noticia.html">
+		                   <img src="thumb/300x160/um-lugar-silencioso-com-amor-simon-e-o-homem-das-cavernas-sao-os-filmes-da-semana-g1-comenta-em-video.jpg" alt="Inscrição no concurso da Ebserh com vagas na PB termina nesta terça-feira" class="img-thumbnail img-responsive">
+		                </a>
+		                <h6>
+		                    <a href="noticia.html" class="title_li_news">Um lugar silencioso com amor Simon e o Homem das Cavernas são os filmes da semana</a>
+		                </h6>
+		                <p class="text-justify">
+		                	Democratas ganharam maioria na Câmara dos Representantes nas eleições desta terça. Donald Trump faz coletiva de imprensa na Casa Branca nesta quarta-feira (7), após as eleições de meio de mandato...
+		                </p>
+		            </li>
+
+		            
+		            <li class="li_news m-3">
+		                <a class="foto_news" href="noticia.html">
+		                   <img src="thumb/300x160/o-dinamarques-preso-e-acusado-de-extremismo-na-russia-por-ser-testemunha-de-jeova.jpg" alt="Osso de 3 cm aponta que humanos saíram da África bem antes do que se pensava" class="img-thumbnail img-responsive">
+		                </a>
+		                <h6>
+		                    <a href="noticia.html" class="title_li_news" >O Dinamarquês preso é acusado de extremismo na Rússia por ser testemunha de Jeová</a>
+		                </h6>
+		                <p class="text-justify">
+		                	Democratas ganharam maioria na Câmara dos Representantes nas eleições desta terça. Donald Trump faz coletiva de imprensa na Casa Branca nesta quarta-feira (7), após as eleições de meio de mandato...
+		                </p>
+		            </li>
+		            
+		            <li class="li_news m-3">
+		                <a class="foto_news" href="noticia.html">
+		                   <img src="thumb/300x160/homem-e-multado-apos-chamar-policiais-de-smurfs-na-austria.jpg" alt="Contêiner será usado como central itinerante de informações a turistas no AP" class="img-thumbnail img-responsive">
+		                </a>
+		                <h6>
+		                    <a href="noticia.html" class="title_li_news">Homem é multado por chamar policiais de Smurfs</a>
+		                </h6>
+		                <p class="text-justify">
+		                	Democratas ganharam maioria na Câmara dos Representantes nas eleições desta terça. Donald Trump faz coletiva de imprensa na Casa Branca nesta quarta-feira (7), após as eleições de meio de mandato...
+		                </p>
+		            </li>
+
+		        </ul>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-4">
+				<aside>
+					<div class="secoes">
+		                <h2 class="m-3">PUBLICIDADE</h2>
+		                <a href="" class="m-3">
+		                	<img src="images/banner2.gif" class="img-responsive">
+		                </a>
+					</div>
+					<div class="secoes">
+		                <h2 class="m-3">TAGS</h2>
+				        <ul class="ul_tags list-unstyled m-3">
+		                    <li>
+				                <a href="mundo.html">Brasil (64)</a>
+				            </li>
+				            <li>
+				                <a href="mundo.html">Carros (23)</a>
+				            </li>
+		                    <li>
+		                		<a href="mundo.html">Ciência e Saúde (37)</a>
+		            		</li>
+		            		<li>
+				                <a href="mundo.html">Mundo (31)</a>
+				            </li>
+		                    <li>
+				                <a href="mundo.html">Economia (45)</a>
+				            </li>
+		                    <li>
+				                <a href="mundo.html">Educação (27)</a>
+				            </li>
+		                    <li>
+				                <a href="mundo.html">Música (14)</a>
+				            </li>
+		                    <li>
+				                <a href="mundo.html">Pop &amp; Arte (11)</a>
+				            </li>
+		                    <li>
+				                <a href="mundo.html">Tecnologia e Games (22)</a>
+				            </li>
+		                    <li>
+				                <a href="mundo.html">Turismo e Viagem (2)</a>
+				            </li>
+		                </ul>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</section>
+ 
+	<footer class="p-3">
+	    <p class="text-center small">--- Copyright 2018 Bootnews© ---</p>
+	</footer>
+</div>
+</body>
+</html>

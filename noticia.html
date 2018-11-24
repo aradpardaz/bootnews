@@ -1,0 +1,131 @@
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/estilo.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="favicon.ico" />
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+	$(document).ready(function() {
+	    var pull = $('#pull');
+	    menu = $('nav ul');
+	    menuHeight  = menu.height();
+
+	    pull.hide();
+	    var w = $(menu).width();
+	    if(w > 800) {
+	    	pull.hide();
+	        menu.removeAttr('style');
+	        console.log('not 	responsive mode'+ w);
+	    }else{
+	    	pull.show();
+	        $('nav ul li').css('border-bottom', 'solid 2px #333');
+	    	console.log('responsive mode' + w);
+	    	menu.slideToggle();
+	    }
+
+	    $(pull).on('click', function(event) {
+	        event.preventDefault();
+	        menu.slideToggle();
+	    });
+	    
+	});
+	</script>
+
+    <title>bootNews (Estrutura básica de uma página com HTML 5)</title>
+</head>
+<body>
+<div class="container bg-branco">
+	<header>
+		<div class="row">
+		    <nav class=" bg-light navbar navbar-expand-lg top-nav">
+		        <ul class="list-unstyled navbar-nav top-nav">
+		        	<li class="p-2 nav-item">
+                        <a href="index.html" class="navbar-brand"><img src="images/logomarca.png" alt="Bootnews" /></a>
+                    </li>
+		            <li class="p-2 nav-item btn-xs">
+		    			<a href="mundo.html">Mundo</a>
+		            </li>
+		            <li class="p-2 nav-item">
+		            	<a href="mundo.html">
+		            	Esportes
+		            	</a>
+		            </li>
+		            <li class="p-2 nav-item">
+		            	<a href="mundo.html">
+		            	Saúde
+		            	</a>
+		            </li>
+		            <li class="p-2 nav-item nav-item">
+		            	<a href="mundo.html">
+		            	Música
+		            	</a>
+		            </li>
+		            <li class="p-2 nav-item">
+		            	<a href="mundo.html">
+		            	Televisão
+		            	</a>
+		        	</li>
+		            <li class="p-2 nav-item">
+		            	<a href="mundo.html">
+		            	Tecnologia
+		            	</a>
+		            </li>
+		        </ul>
+		        <a href="/" id="pull" class="p-2"><img src="images/nav-icon.png" title="menu"></a>
+		    </nav>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 text-center p-3">
+				<a href="" target="_blank">
+					<img src="images/banner728x90.png" class="img-responsive">
+				</a>
+			</div>
+		</div>
+		
+	</header>
+
+	
+ 	
+	<section>
+		<div class="row">
+			<div class="col-md-12 m-3">
+				<h2>Zuckerberg, CEO do Facebook, testemunha diante do Congresso dos EUA pela 1ª vez</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+	            <img src="thumb/560x520/em-vez-de-zuckerberg-chefe-de-tecnologia-do-facebook-ira-ao-parlamento-britanico-falar-sobre-escandalo.jpg" alt="Zuckerberg, CEO do Facebook, testemunha diante do Congresso dos EUA pela 1ª vez" class="img-responsive img-thumbnail">
+		           
+		    </div>
+			<div class="col-md-6">
+				<p class="text-justify">
+					Segundo o Ministério da Educação, 112.800 bolsas ainda não foram preenchidas, o que equivale a cerca de 46% do total de bolsas do Prouni oferecidas neste semestre. Prouni recebe até esta segunda (9) inscrições de candidatos não matriculados para bolsas remanescentes<br />
+Reprodução<br />
+Termina nesta segunda-feira (9) as inscrições para as 112.800 bolsas remanescentes do Programa Universidade para Todos (Prouni). O prazo vale para os alunos não matriculados nas instituições de ensino superior. Já para os matriculados, o prazo vai até 30 de abril.<br />
+O Prouni oferece bolsas de estudo integrais e parciais (50%) em cursos de graduação de instituições privadas de educação superior. As inscrições devem ser feitas pela internet na página do programa (http://siteprouni.mec.gov.br).<br />
+Estão aptos a se candidatar a uma bolsa remanescente quem for professor da rede pública de ensino ou quem tenha participado do Exame Nacional do Ensino Médio (Enem) a partir de 2010, com nota superior a 450 pontos e acima de zero na redação. <br />
+É necessário, ainda, que o candidato atenda a pelo menos um dos requisitos a seguir:<br />
+ter cursado o ensino médio completo em escola pública, ou em instituição privada como bolsista integral<br />
+possuir alguma deficiência<br />
+ser professor da rede pública<br />
+estar enquadrado no perfil de renda exigido pelo programa.<br />
+Neste semestre, cerca de 46% das bolsas oferecidas no Prouni ficaram abertas após o prazo regular de seleção. Foram ofertadas aproximadamente 243 mil bolsas (113.863 integrais e 129.124 parciais). <br />
+As bolsas integrais são destinadas aos estudantes com renda per capita de até 1,5 salário mínimo. Já as bolsas parciais contemplam candidatos que têm renda familiar per capita de até três salários mínimos.<br />
+Poderão concorrer à primeira opção de curso aqueles que não foram pré-selecionados nas chamadas regulares ou foram pré-selecionados só na segunda opção de curso, mas não houve formação de turma. 
+				</p>
+			</div>
+		</div>
+	</section>
+ 
+	<footer class="p-3">
+	    <p class="text-center small">--- Copyright 2018 Bootnews© ---</p>
+	</footer>
+</div>
+</body>
+</html>
